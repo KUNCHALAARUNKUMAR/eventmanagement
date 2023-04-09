@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<style>
+
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container1 {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+input[type=date],input[type=tel] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+</style>
+<title>Event confirmation</title>
+</head>
+<body>
+        <div  style="position: sticky;top:0;  z-index: 1030;margin: 0%;">
+
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black;padding: 0%;height: 80px;">
+   
+                <div>
+                <a class="navbar-brand  ml-2" style="font-size: 35px;" href="#"><span class="brand">Your</span><span class="brand1 text-success">Event</span></a>
+               </div>
+               
+              </nav>
+        </div>
+<div class="container-fluid">
+        <h2 class="text-success" style="padding-top: 20px;padding-left: 20px;">Enter The Details For Comfirm Your Event Date Booking</h2>
+</div>
+
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form action="Wiform.php" method="POST">
+      
+        <div class="row">
+          <div class="col-50">
+            <h3 class="" style="margin-bottom: 20px;">Billing Address</h3>
+            <label for="fname"></i> Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Enter Your Name">
+            <div class="row">
+                    <div class="col-50">
+                        <label for="email"></i> Email</label>
+                        <input type="text" id="email" name="email" placeholder="Enter your mail id">
+                    </div>
+                    <div class="col-50">
+                        <label for="email"></i> Mobile Number</label>
+                        <input type="tel" id="mobile" name="mobile" placeholder="+91 ">
+                    </div>
+                  </div>
+           
+            <label for="adr"></i> Address</label>
+            <input type="text" id="adr" name="address" placeholder="Address">
+            <label for="city"> City</label>
+            <input type="text" id="city" name="city" placeholder="Enter Your City Name">
+
+            <div class="row">
+              <div class="col-50">
+                <label for="state">State</label>
+                <select id="State" >
+                  <option value="State"> Select State</option>
+                  <option value="Telangana"> Telangana</option>
+                  <option value="Andra Pradesh"> Andra Pradesh</option>
+                  <option value="Kerala">Kerala</option>
+                  <option value="Delhi"> Delhi</option>
+                  <option value="Goa"> Goa</option>
+                </select>
+                
+              </div>
+              <div class="col-50">
+                <label for="zip">Pin code</label>
+                <input type="text" id="zip" name="zip" placeholder="">
+              </div>
+            </div>
+
+            <label for="city"> Event Date</label>
+            <input type="date" id="Wd" name="wd" >
+          </div>
+
+          <div class="col-5">
+            <h3>Payment</h3>
+            <label for="fname">Accepted Cards</label>
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+            </div>
+            <label for="cname">Card Holder Name</label>
+            <input type="text" id="cname" name="cardname" placeholder="">
+            <label for="ccnum">Card Number</label>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+            <label for="expmonth">Exp Month</label>
+            <input type="text" id="expmonth" name="expmonth" placeholder="September">
+            <div class="row">
+              <div class="col-50">
+                <label for="expyear">Exp Year</label>
+                <input type="text" id="expyear" name="expyear" placeholder="2018">
+              </div>
+              <div class="col-50">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="352">
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <input type="submit" value="Continue to checkout" class="btn btn-outline-success">
+      </form>
+    </div>
+  </div>
+
+</div>
+
+<footer class="page-footer font-small unique-color-dark">
+
+    <div class="bg-success">
+      <div class="container">
+  
+       
+  
+      </div>
+    </div>
+  
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left mt-5">
+  
+      <!-- Grid row -->
+      <div class="row mt-3">
+  
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+  
+        </div>
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          
+          <!-- Links -->
+          <h6 class="text-uppercase text-dark font-weight-bold">Contact</h6>
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;border: 0.5px solid green;">
+          <p><li> Hyderabad ,India </p></li>
+          <p>
+            <li> yourevent@help.com </li></p>
+          <p>
+           <li> +91 12345678</li></p>
+          <p>
+            <li>+91 123456478</li></p>
+  
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row -->
+  </div>
+    <!-- Footer Links -->
+
+  
+  </footer>
+
+</body>
+</html>
